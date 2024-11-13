@@ -11,6 +11,12 @@ function App(){
   var Jack ="kiran";
   var Array =[1,2,4,5,6];
 
+  function Mohit(){
+    console.log('This is my message')
+
+  }
+  Mohit();
+
   return(
     <>
     <h1>Hi my name is {Jack} </h1>
@@ -25,6 +31,9 @@ function App(){
     }
     <p style={{backgroundColor:object.background}}>This is scc from object values</p>
     <img src={image1} height={'250px'} width={'auto'}/>
+    <br/>
+    <button onClick={()=>{alert('His this is click event')}}>Click</button>
+    <button onClick={()=>{Mohit()}}>Click2</button>
     </>
   )
 }
