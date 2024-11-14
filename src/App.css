@@ -8,3 +8,35 @@
   width: 15px;
   height: 15px;
 }
+#Calculator {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#Calculator h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#Cal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#Cal button {
+  padding: 15px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#Cal button:hover {
+  background-color: #0056b3;
+}

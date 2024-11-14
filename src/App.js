@@ -100,11 +100,20 @@ function SubmitData(){
     <br/>
     <hr/>
 
-    <h1> counter using use state hook</h1>
-    <h1>{num}</h1>
+    <h1> counter using useState hook</h1>
+    <div id="Calculator">
+    <h1>{num}</h1> 
+    </div>
+
+    <div id="Cal">
     <button onClick={()=>{setNum(num+1)}}>Increment</button>
     <button onClick={()=>{setNum(num+-1)}}>Decrement</button>
+    <button onClick={()=>{setNum(num+5)}}>Add 5</button>
+    <button onClick={()=>{setNum(num-9)}}>Sub 9</button>
+    <button onClick={()=>{setNum(num*12)}}>Multiply 12</button>
     <button onClick={()=>{setNum(Math.floor(num/2))}}>Devide by 2</button>
+    <button onClick={()=>{setNum(num*0)}}>0</button>
+    </div>
 
     <div>
       <h1>GST Calculator</h1>
