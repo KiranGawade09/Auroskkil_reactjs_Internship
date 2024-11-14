@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import image1 from '../src/image/img1.png';
 import './App.css';
 
 
-function App(){
+function App(props){
 
   var object ={
     background:"red"
@@ -16,7 +16,7 @@ function App(){
 
   }
   Mohit();
-
+   const [tiger,setTiger]=useState('Bengal Tiger');
   return(
     <>
     <h1>Hi my name is {Jack} </h1>
@@ -34,6 +34,10 @@ function App(){
     <br/>
     <button onClick={()=>{alert('His this is click event')}}>Click</button>
     <button onClick={()=>{Mohit()}}>Click2</button>
+    <hr/>
+    <h1>Hi my name is {props.name} and my address is {props.address}</h1>
+    <h1>{tiger}</h1>
+    <button onClick={()=>{setTiger('Delhi tiger')}}>Update var</button>
     </>
   )
 }
