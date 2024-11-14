@@ -8,6 +8,8 @@ function App(props){
   const [tiger,setTiger] = useState('Bengal Tiger');
   const [status,setstatus] = useState('');
   const [color,setColor] = useState('');
+  const [radius,setRadius] = useState();
+  const [num,setNum] = useState(0);
 
   var object ={
     background:"red"
@@ -43,18 +45,32 @@ function Update(){
     <p style={{backgroundColor:object.background}}>This is scc from object values</p>
     <img src={image1} height={'250px'} width={'auto'}/>
     <br/>
+
     <button onClick={()=>{alert('His this is click event')}}>Click</button>
     <button onClick={()=>{Mohit()}}>Click2</button>
     <hr/>
+
     <h1>Hi my name is {props.name} and my address is {props.address}</h1>
     <h1>{tiger}</h1>
     <button onClick={()=>{Update()}}>Update var</button>
     <hr/>
+
     <h1>Check whether the person is inline or offline</h1>
-    <div id="circle" style={{backgroundColor:color}}></div><span>{status}</span>
+    <div id="circle" style={{backgroundColor:color,borderRadius:radius}}></div><span>{status}</span>
     <br/>
-    <button onClick={()=>{setColor('green');setstatus('online')}}>online status</button>
-    <button onClick={()=>{setColor('red');setstatus('offline')}}>offline status</button>
+
+    <button onClick={()=>{setColor('green');setstatus('online');setRadius(0)}}>online status</button>
+    <button onClick={()=>{setColor('red');setstatus('offline');setRadius('100')}}>offline status</button>
+    <br/>
+    <hr/>
+
+    <h1> counter using use state hook</h1>
+    <h1>{num}</h1>
+    <button onClick={()=>{setNum(num+1)}}>Increment</button>
+    <button onClick={()=>{setNum(num+-1)}}>Decrement</button>
+    <button onClick={()=>{setNum(Math.floor(num/2))}}>Devide by 2</button>
+
+
 
     </>
   ) 
