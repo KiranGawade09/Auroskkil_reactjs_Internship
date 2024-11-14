@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import image1 from '../src/image/img1.png';
 import './App.css';
+import { Link } from "react-router-dom";
 
 
 function App(props){
@@ -32,6 +33,24 @@ function Update(){
 
   return(
     <>
+    <nav>
+      <div className="brand-name">
+        <Link to={'/'}>t Home Page</Link>
+     
+      </div>
+      <ul>
+        <li>
+           <div>
+            <Link to={'./Mike'}>Mike component</Link>
+           </div>
+        </li>
+        <li>
+          <div>
+          <Link to={'./Jack'}>Jack component</Link>
+            </div>
+        </li>
+      </ul>
+    </nav>
     <h1>Hi my name is {Jack} </h1>
     <h1 style={{background:"grey"}}>hello React app here</h1>
     <p id="txt1">kiran gawade here</p>
