@@ -1,3 +1,10 @@
 #txt1{
   background-color: blueviolet;
 }
+
+#circle{
+  border: 1px solid black;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+}

@@ -5,6 +5,10 @@ import './App.css';
 
 function App(props){
 
+  const [tiger,setTiger] = useState('Bengal Tiger');
+  const [status,setstatus] = useState('');
+  const [color,setColor] = useState('');
+
   var object ={
     background:"red"
   }
@@ -16,7 +20,14 @@ function App(props){
 
   }
   Mohit();
-   const [tiger,setTiger]=useState('Bengal Tiger');
+
+function Update(){
+  var update =prompt('Enter value for tiger');
+  setTiger(update);
+}
+
+   
+
   return(
     <>
     <h1>Hi my name is {Jack} </h1>
@@ -37,9 +48,16 @@ function App(props){
     <hr/>
     <h1>Hi my name is {props.name} and my address is {props.address}</h1>
     <h1>{tiger}</h1>
-    <button onClick={()=>{setTiger('Delhi tiger')}}>Update var</button>
+    <button onClick={()=>{Update()}}>Update var</button>
+    <hr/>
+    <h1>Check whether the person is inline or offline</h1>
+    <div id="circle" style={{backgroundColor:color}}></div><span>{status}</span>
+    <br/>
+    <button onClick={()=>{setColor('green');setstatus('online')}}>online status</button>
+    <button onClick={()=>{setColor('red');setstatus('offline')}}>offline status</button>
+
     </>
-  )
+  ) 
 }
 
 export default App;
