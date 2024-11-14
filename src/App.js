@@ -11,6 +11,10 @@ function App(props){
   const [color,setColor] = useState('');
   const [radius,setRadius] = useState();
   const [num,setNum] = useState(0);
+  const [gstValue,setGstValue]= useState();
+  const [ans,setAns] = useState();
+
+
 
   var object ={
     background:"red"
@@ -28,6 +32,19 @@ function Update(){
   var update =prompt('Enter value for tiger');
   setTiger(update);
 }
+
+function SubmitData(){
+
+  console.log(gstValue);
+  if (gstValue==''){
+    return true;
+  }
+  else{
+  return setAns(gstValue*0.18);
+  return ans;
+    }
+  }
+
 
    
 
@@ -88,6 +105,13 @@ function Update(){
     <button onClick={()=>{setNum(num+1)}}>Increment</button>
     <button onClick={()=>{setNum(num+-1)}}>Decrement</button>
     <button onClick={()=>{setNum(Math.floor(num/2))}}>Devide by 2</button>
+
+    <div>
+      <h1>GST Calculator</h1>
+      <input type="number" value={gstValue} onChange={(e)=>{setGstValue(e.target.value)}} placeholder="Enter a vaalue to find gst"/>
+      <h1>And your anser is:<span id="ans">{ans}</span></h1>
+      <button onClick={()=>{SubmitData()}}>Get ans for 18% GST</button>
+    </div>
 
 
 
